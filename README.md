@@ -1,18 +1,49 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# PDF Merger
 
-## Folder Structure
+## Description
+The PDF Merger is a Java application that simplifies the process of merging multiple PDF files into a single document. This tool is designed to be simple, efficient, and user-friendly, catering to both professional and personal needs.
 
-The workspace contains two folders by default, where:
+## Prerequisites
+Before you can run PDF Merger, ensure you have the following installed:
+- Java JDK 11 or higher
+- Apache Maven 3.6.3 or higher
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Installation (for users)
+Download the precompiled JAR from the releases section. Or download the code and build it yourself. If you are building it yourself follow the bottom instructions.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Installation (for developers)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Clone the Repository
+To get started, clone the repository to your local machine using the following command:
+```bash
+git clone https://github.com/Developer78-sgyuijhgygwtdwgyhutre45r5t/JavaPDFMerger.git
+cd JavaPDFMerger
+```
 
-## Dependency Management
+### Build the Project
+Build the project with Maven:
+```bash
+mvn clean install
+```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Usage
+To merge PDFs, navigate to the directory containing the jar release file and upload some PDFs and press the merge button.
+
+### Use cases
+- Merge all PDF files in the `documents` folder and output a single PDF named `merged_output.pdf`
+- Piece back together a corrupted or mistakenly exported file.
+
+## Contributing
+Contributions to the PDF Merger project are welcome! Here's how you can contribute:
+- Fork the repository.
+- Create a new branch (`git checkout -b feature-branch`).
+- Make your changes and commit them (`git commit -am 'Add some feature'`).
+- Push to the branch (`git push origin feature-branch`).
+- Create a new Pull Request.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+For questions or assistance with the PDF Merger tool, please open an issue in the repository.
