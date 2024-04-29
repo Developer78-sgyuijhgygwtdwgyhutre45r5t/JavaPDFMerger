@@ -88,7 +88,7 @@
 				</version>
 				<configuration>
 					<mainClass>
-						HelloWorldFrame
+						UserInterface
 					</mainClass>
 				</configuration>
 			</plugin>
