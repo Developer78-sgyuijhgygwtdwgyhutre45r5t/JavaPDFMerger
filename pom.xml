@@ -9,7 +9,7 @@
 		PDFMerger
 	</artifactId>
 	<version>
-		1.0-SNAPSHOT
+		1.0.1-RELEASE
 	</version>
 	<properties>
 		<maven.compiler.source>
@@ -46,6 +46,7 @@
 				${javafx.version}
 			</version>
 		</dependency>
+		<!-- Apache PDFBox -->
 		<dependency>
 			<groupId>
 				org.apache.pdfbox
@@ -60,6 +61,7 @@
 	</dependencies>
 	<build>
 		<plugins>
+			<!-- Compiler plugin configures the Java version to use -->
 			<plugin>
 				<groupId>
 					org.apache.maven.plugins
@@ -76,6 +78,7 @@
 					</release>
 				</configuration>
 			</plugin>
+			<!-- JavaFX Maven Plugin configuration -->
 			<plugin>
 				<groupId>
 					org.openjfx
@@ -88,9 +91,50 @@
 				</version>
 				<configuration>
 					<mainClass>
-						UserInterface
+						UIStarter
 					</mainClass>
 				</configuration>
+			</plugin>
+			<!-- Maven Assembly Plugin to create a fat JAR including all dependencies -->
+			<plugin>
+				<groupId>
+					org.apache.maven.plugins
+				</groupId>
+				<artifactId>
+					maven-assembly-plugin
+				</artifactId>
+				<version>
+					3.3.0
+				</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>
+								UIStarter
+							</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>
+							jar-with-dependencies
+						</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>
+							make-assembly
+						</id>
+						<phase>
+							package
+						</phase>
+						<goals>
+							<goal>
+								single
+							</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
