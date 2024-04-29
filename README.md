@@ -10,7 +10,7 @@ Before you can run PDF Merger, ensure you have the following installed:
 - Apache Maven 3.6.3 or higher
 
 ## Installation (for users)
-Download the precompiled JAR from the releases section. Or download the code and build it yourself. If you are building it yourself follow the bottom instructions.
+Download the precompiled JAR from the releases section. Or download the code and build it yourself. If you are building it yourself follow the instructions below.
 
 ## Installation (for developers)
 
